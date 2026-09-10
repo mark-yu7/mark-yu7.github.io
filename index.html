@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mingyu Ma — undergraduate researcher at Wuhan University working on AI security and trustworthy machine learning.">
+  <title>Mingyu Ma · 马明宇</title>
+  <style>
+    :root{--a:#6b0610;--a2:#9b2430;--bg:#fff;--soft:#f8f7f5;--line:#e8e3df;--text:#20242a;--muted:#6d737c;--blue:#315f8a;--gold:#aa6b14}
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.65 Georgia,"Times New Roman","Noto Serif SC",serif}
+    a{color:#1769c2;text-decoration:none}
+    a:hover{text-decoration:underline}
+    nav{position:sticky;top:0;z-index:9;background:#fffffff2;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .nav{max-width:1240px;margin:auto;padding:13px 34px;display:flex;gap:24px;align-items:center;overflow:auto}
+    .nav b{color:var(--a);font-size:19px;margin-right:auto;white-space:nowrap}
+    .nav a{color:#444;font:14px Arial,"Microsoft YaHei",sans-serif;white-space:nowrap}
+    .wrap{max-width:1240px;margin:auto;padding:42px 34px 80px;display:grid;grid-template-columns:255px minmax(0,1fr);gap:54px}
+    .side{position:sticky;top:82px;align-self:start}
+    .avatar{width:205px;height:205px;border-radius:50%;overflow:hidden;border:1px solid var(--line);box-shadow:0 10px 28px #00000012;background:var(--soft)}
+    .avatar svg{width:100%;height:100%;display:block}
+    .side h1{font-size:30px;line-height:1.1;margin:18px 0 3px}
+    .cn{color:var(--muted);font-size:17px}
+    .aff{margin:13px 0;color:#444}
+    .tag{font-style:italic;color:var(--muted);font-size:14px}
+    .contact{margin-top:16px;border-top:1px solid var(--line);padding-top:14px;font:13px/1.8 Arial,"Microsoft YaHei",sans-serif}
+    .contact a{overflow-wrap:anywhere}
+    .section{margin-bottom:48px;scroll-margin-top:80px}
+    .section h2{color:#2a1e1f;font-size:27px;margin:0 0 17px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+    .lead{font-size:18px}
+    .chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+    .chips span,.badge{font:12px Arial,"Microsoft YaHei",sans-serif;border:1px solid var(--line);background:var(--soft);border-radius:999px;padding:4px 9px}
+    .chips .hot,.badge.red{color:var(--a);background:#fff1f1;border-color:#e7bfc4}
+    .badge.gold{color:#8d5700;background:#fff8dc;border-color:#ead48c}
+    .badge.green{color:#166b36;background:#eaf9ef;border-color:#b8e4c8}
+    .news{list-style:none;padding:0}
+    .news li{display:grid;grid-template-columns:64px 1fr;gap:12px;margin:10px 0}
+    .date{color:var(--muted);font-style:italic}
+    .edu{border-left:3px solid var(--a);background:var(--soft);padding:16px 19px;border-radius:0 10px 10px 0}
+    .edu b{font-size:18px}
+    .meta{font:13px Arial,"Microsoft YaHei",sans-serif;color:var(--muted);margin-top:5px}
+    .meta strong{color:var(--a)}
+    .card{display:grid;grid-template-columns:300px 1fr;gap:25px;padding:23px 0;border-bottom:1px solid var(--line);align-items:start}
+    .card:last-child{border-bottom:0}
+    .thumb{display:block;aspect-ratio:4/3;border:1px solid var(--line);border-radius:12px;overflow:hidden;background:var(--soft);box-shadow:0 8px 24px #00000012;transition:.2s}
+    .thumb:hover{transform:translateY(-2px);box-shadow:0 12px 30px #0000001d}
+    .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+    .badges{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 8px}
+    .title{font-size:20px;line-height:1.32;margin:0 0 5px}
+    .title small{display:block;color:var(--muted);font-size:14px;font-weight:normal;margin-top:3px}
+    .field{color:var(--muted);font-style:italic;font-size:14px}
+    .card p{font-family:Arial,"Microsoft YaHei",sans-serif;color:#424850;font-size:14px;line-height:1.65}
+    .awards{list-style:none;padding:0}
+    .awards li{display:grid;grid-template-columns:56px 1fr auto;gap:12px;padding:10px 0;border-bottom:1px solid var(--line)}
+    .rank{font:11px Arial,"Microsoft YaHei",sans-serif;color:var(--a);border:1px solid #e7bfc4;background:#fff1f1;padding:2px 7px;border-radius:5px;white-space:nowrap}
+    .courses{display:grid;grid-template-columns:1fr 1fr;gap:6px 24px}
+    .course{display:flex;justify-content:space-between;border-bottom:1px dotted var(--line);font:13px Arial,"Microsoft YaHei",sans-serif;padding:5px 0}
+    .score{color:var(--a);font-weight:bold}
+    .box{padding:18px 20px;background:var(--soft);border:1px solid var(--line);border-radius:10px}
+    footer{margin-top:20px;color:var(--muted);font:12px Arial,"Microsoft YaHei",sans-serif}
+    @media(max-width:880px){
+      .wrap{grid-template-columns:1fr;padding:28px 20px}
+      .side{position:static;text-align:center}
+      .avatar{margin:auto}
+      .contact{max-width:430px;margin:16px auto 0}
+      .card{grid-template-columns:1fr}
+      .thumb{max-width:420px}
+      .courses{grid-template-columns:1fr}
+      .nav{padding:12px 20px}
+      .awards li{grid-template-columns:50px 1fr}
+      .rank{grid-column:2;justify-self:start}
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav">
+      <b>Mingyu Ma / 马明宇</b>
+      <a href="#about">About</a>
+      <a href="#news">News</a>
+      <a href="#education">Education</a>
+      <a href="#research">Research</a>
+      <a href="#awards">Awards</a>
+      <a href="#contact">Contact</a>
+      <a href="https://arxiv.org/abs/2609.08646" target="_blank" rel="noreferrer">Paper ↗</a>
+    </div>
+  </nav>
+
+  <div class="wrap">
+    <aside class="side">
+      <div class="avatar" aria-label="Mingyu Ma">
+        <svg viewBox="0 0 205 205" role="img" aria-label="MM initials">
+          <circle cx="102.5" cy="102.5" r="102" fill="#f8f7f5"/>
+          <circle cx="102.5" cy="102.5" r="78" fill="#fff" stroke="#e8e3df"/>
+          <path d="M54 130V74h13l23 35 23-35h13v56h-13V96l-18 27h-10L67 96v34H54z" fill="#6b0610"/>
+          <path d="M133 130V74h13l17 23 17-23h13v56h-13V96l-17 22-17-22v34h-13z" fill="#aa6b14"/>
+        </svg>
+      </div>
+      <h1>Mingyu Ma</h1>
+      <div class="cn">马明宇</div>
+      <div class="aff">Wuhan University<br>School of Cyber Science and Engineering<br><small>Undergraduate · Class of 2027</small></div>
+      <div class="tag">AI Security · Trustworthy ML · LLM Safety</div>
+      <div class="contact">
+        📍 Wuhan, China<br>
+        ✉ <a href="mailto:mingyumawhu@163.com">mingyumawhu@163.com</a><br>
+        ↗ <a href="https://arxiv.org/abs/2609.08646" target="_blank" rel="noreferrer">arXiv: 2609.08646</a>
+      </div>
+    </aside>
+
+    <main>
+      <section class="section" id="about">
+        <h2>About Me</h2>
+        <p class="lead">Hello! I am <strong>Mingyu Ma (马明宇)</strong>, an undergraduate student at <strong>Wuhan University</strong> studying cybersecurity.</p>
+        <p>My current interests focus on <strong>AI security</strong>, <strong>trustworthy machine learning</strong>, and the safety of large language models. I am especially interested in instruction conflict detection, multimodal copyright protection, and privacy-preserving intelligent systems.</p>
+        <div class="chips">
+          <span class="hot">AI Security</span>
+          <span class="hot">LLM Safety</span>
+          <span>Trustworthy ML</span>
+          <span>Instruction Conflict</span>
+          <span>Multimodal Security</span>
+          <span>Privacy Protection</span>
+        </div>
+      </section>
+
+      <section class="section" id="news">
+        <h2>News</h2>
+        <ul class="news">
+          <li><span class="date">2026</span><span>Our first-author paper on <strong>Energy-Driven Latent Conflict Detection</strong> was submitted to <strong>EMNLP 2026</strong>.</span></li>
+          <li><span class="date">2026</span><span>Received a <strong>National First Prize</strong> in the China Robotics and Artificial Intelligence Competition.</span></li>
+          <li><span class="date">2026</span><span>Received <strong>two National Second Prizes</strong> in the National Undergraduate Computer Design Competition.</span></li>
+          <li><span class="date">2026</span><span>Received National Second and Third Prizes in the China College Computer Competition Network Technology Challenge.</span></li>
+        </ul>
+      </section>
+
+      <section class="section" id="education">
+        <h2>Education</h2>
+        <div class="edu">
+          <b>Wuhan University · 武汉大学</b>
+          <div>Undergraduate in Cybersecurity · 国家网络安全学院</div>
+          <div class="meta">2023.09 – 2027.06 · GPA <strong>3.56 / 4.0</strong> · Major Rank <strong>51 / 172</strong></div>
+        </div>
+        <div class="chips">
+          <span>C/C++</span><span>Python</span><span>PyTorch</span><span>NumPy</span><span>LaTeX</span><span>Network Security</span>
+        </div>
+      </section>
+
+      <section class="section" id="research">
+        <h2>Selected Research</h2>
+        <article class="card">
+          <a class="thumb" href="https://arxiv.org/abs/2609.08646" target="_blank" rel="noreferrer">
+            <img src="assets/projects/network-security.png" alt="Certificate related to Mingyu Ma's research and competition work">
+          </a>
+          <div>
+            <div class="badges"><span class="badge gold">EMNLP 2026 · Submitted</span><span class="badge red">First Author</span></div>
+            <h3 class="title">Combating Instruction Conflict via Energy-Driven Latent Conflict Detection</h3>
+            <div class="field">LLM Safety · Instruction Following · Representation Learning</div>
+            <p>We propose an energy-driven latent conflict detection framework, modeling system-constraint following as a low-energy equilibrium. Dual-view features built from the final hidden states and contrastive optimization create a robust energy decision barrier in latent space, turning conflict interception into a latent energy-distribution detection problem.</p>
+            <p><a href="https://arxiv.org/abs/2609.08646" target="_blank" rel="noreferrer">Read the paper on arXiv ↗</a></p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section">
+        <h2>Research Projects & Competitions</h2>
+        <article class="card">
+          <a class="thumb" href="assets/projects/bonevibauth.png" target="_blank" rel="noreferrer"><img src="assets/projects/bonevibauth.png" alt="China Robotics and Artificial Intelligence Competition certificate"></a>
+          <div>
+            <div class="badges"><span class="badge red">National First Prize</span><span class="badge green">Core Member</span></div>
+            <h3 class="title">BoneVibAuth<small>Implicit identity authentication using head-vibration feedback</small></h3>
+            <div class="field">AI Security · Authentication Security · Wearable Sensing</div>
+            <p>An implicit authentication approach for bone-conduction devices using low-interference probing, head-impedance and structural-asymmetry features, lightweight Siamese transfer learning, and adaptive model updates.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="thumb" href="assets/projects/voice-defense.png" target="_blank" rel="noreferrer"><img src="assets/projects/voice-defense.png" alt="Voice privacy defense competition certificate"></a>
+          <div>
+            <div class="badges"><span class="badge gold">National Second Prize</span><span class="badge green">Core Member</span></div>
+            <h3 class="title">VoiceShield<small>Active voice privacy defense against voice-cloning misuse</small></h3>
+            <div class="field">AI Security · Content Security · Deepfake Defense</div>
+            <p>A proactive speaker-privacy pipeline combining voice identity substitution, adversarial waveform optimization, and dynamic ensemble attacks to improve anti-cloning strength, perceptual quality, and transferability to unknown synthesis models.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <a class="thumb" href="assets/projects/network-security.png" target="_blank" rel="noreferrer"><img src="assets/projects/network-security.png" alt="Network technology challenge certificate"></a>
+          <div>
+            <div class="badges"><span class="badge gold">National Second Prize</span><span class="badge green">Team Member</span></div>
+            <h3 class="title">Network Technology Challenge<small>Security-oriented systems and engineering practice</small></h3>
+            <div class="field">Network Security · Systems · Applied Research</div>
+            <p>Applied research and engineering work covering security analysis, system implementation, and competition-oriented problem solving in a collaborative undergraduate team.</p>
+          </div>
+        </article>
+      </section>
+
+      <section class="section" id="awards">
+        <h2>Honors & Awards</h2>
+        <ul class="awards">
+          <li><span class="date">2026</span><span><strong>China Robotics and Artificial Intelligence Competition</strong> — National First Prize</span><span class="rank">National</span></li>
+          <li><span class="date">2026</span><span><strong>National Undergraduate Computer Design Competition</strong> — National Second Prize ×2</span><span class="rank">National</span></li>
+          <li><span class="date">2026</span><span><strong>China College Computer Competition</strong> — Network Technology Challenge, Second Prize & Third Prize</span><span class="rank">National</span></li>
+          <li><span class="date">—</span><span><strong>Wuhan University</strong> — Undergraduate research and academic practice</span><span class="rank">University</span></li>
+        </ul>
+      </section>
+
+      <section class="section">
+        <h2>Selected Coursework</h2>
+        <div class="courses">
+          <div class="course"><span>Network Security</span><span class="score">—</span></div>
+          <div class="course"><span>Operating Systems</span><span class="score">—</span></div>
+          <div class="course"><span>Computer Networks</span><span class="score">—</span></div>
+          <div class="course"><span>Data Structures</span><span class="score">—</span></div>
+          <div class="course"><span>Machine Learning</span><span class="score">—</span></div>
+          <div class="course"><span>Information Security</span><span class="score">—</span></div>
+        </div>
+      </section>
+
+      <section class="section" id="contact">
+        <h2>Contact</h2>
+        <div class="box">For research, collaboration, or academic opportunities, please contact <a href="mailto:mingyumawhu@163.com">mingyumawhu@163.com</a>.</div>
+        <footer>© 2026 Mingyu Ma · Static academic homepage hosted on GitHub Pages.</footer>
+      </section>
+    </main>
+  </div>
+</body>
+</html>
