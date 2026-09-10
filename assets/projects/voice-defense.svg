@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="900" viewBox="0 0 1200 900" role="img" aria-labelledby="title desc">
+  <title id="title">VoiceShield project overview</title>
+  <desc id="desc">A conceptual diagram of proactive voice privacy defense against voice-cloning misuse.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="8" markerHeight="8" orient="auto"><path d="M0 0L10 5L0 10z" fill="#7b1725"/></marker>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%"><feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#5b1823" flood-opacity=".12"/></filter>
+    <style>
+      .serif{font-family:Georgia,"Times New Roman",serif}.sans{font-family:Arial,"Microsoft YaHei",sans-serif}
+      .ink{fill:#28252a}.muted{fill:#756b6b}.red{fill:#7b1725}.blue{fill:#315f8a}.gold{fill:#aa6b14}
+    </style>
+  </defs>
+  <rect width="1200" height="900" fill="#fcf8f4"/>
+  <path d="M0 790C230 730 350 850 580 792S965 730 1200 802" fill="none" stroke="#ead9d1" stroke-width="2" stroke-dasharray="2 11"/>
+  <path d="M1060 0c36 38 94 40 140 87" fill="none" stroke="#d8b7b9" stroke-width="2"/>
+  <text x="58" y="78" class="serif red" font-size="62" font-weight="700">VoiceShield</text>
+  <text x="61" y="119" class="serif ink" font-size="25">Active voice privacy defense against voice-cloning misuse</text>
+  <path d="M61 146h180" stroke="#7b1725" stroke-width="5"/>
+  <path d="M252 146h70" stroke="#e0b8b6" stroke-width="5"/>
+
+  <g filter="url(#shadow)">
+    <rect x="58" y="215" width="290" height="465" rx="22" fill="#fff" stroke="#e0ceca" stroke-width="2"/>
+  </g>
+  <text x="92" y="267" class="serif red" font-size="27" font-weight="700">1  Raw speech</text>
+  <text x="92" y="300" class="sans muted" font-size="18">A speaker's voice is exposed</text>
+  <circle cx="203" cy="420" r="76" fill="#fff4f0" stroke="#d6a1a4" stroke-width="3"/>
+  <path d="M181 403v34c0 16 11 28 25 28s25-12 25-28v-34" fill="none" stroke="#7b1725" stroke-width="9" stroke-linecap="round"/>
+  <path d="M164 427c0 31 18 55 42 55s42-24 42-55M206 482v33M181 515h50" fill="none" stroke="#7b1725" stroke-width="6" stroke-linecap="round"/>
+  <path d="M101 596l12-33 12 57 13-79 14 52 13-29 13 40 14-55 13 45 13-31 14 54 14-68 14 48 14-24 12 30" fill="none" stroke="#aa6b14" stroke-width="4"/>
+  <text x="203" y="640" text-anchor="middle" class="sans muted" font-size="17">speaker identity + waveform</text>
+
+  <path d="M370 445h55" fill="none" stroke="#7b1725" stroke-width="4" marker-end="url(#arrow)"/>
+  <text x="370" y="420" class="sans muted" font-size="16">protect</text>
+
+  <g filter="url(#shadow)">
+    <rect x="425" y="215" width="715" height="465" rx="22" fill="#fff" stroke="#e0ceca" stroke-width="2"/>
+  </g>
+  <text x="466" y="267" class="serif red" font-size="27" font-weight="700">2  Proactive defense pipeline</text>
+  <text x="466" y="300" class="sans muted" font-size="18">Break the cloning chain before misuse</text>
+
+  <rect x="470" y="354" width="185" height="122" rx="16" fill="#fff5e7" stroke="#dfbb7a" stroke-width="2"/>
+  <text x="562" y="393" text-anchor="middle" class="sans gold" font-size="20" font-weight="700">Identity</text>
+  <text x="562" y="421" text-anchor="middle" class="sans gold" font-size="20" font-weight="700">substitution</text>
+  <text x="562" y="450" text-anchor="middle" class="sans muted" font-size="16">anonymous voice layer</text>
+  <path d="M655 415h42" fill="none" stroke="#7b1725" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="700" y="354" width="185" height="122" rx="16" fill="#f8edf0" stroke="#d6a1a4" stroke-width="2"/>
+  <text x="792" y="393" text-anchor="middle" class="sans red" font-size="20" font-weight="700">Waveform</text>
+  <text x="792" y="421" text-anchor="middle" class="sans red" font-size="20" font-weight="700">optimization</text>
+  <text x="792" y="450" text-anchor="middle" class="sans muted" font-size="16">adversarial perturbation</text>
+  <path d="M885 415h42" fill="none" stroke="#7b1725" stroke-width="4" marker-end="url(#arrow)"/>
+
+  <rect x="930" y="354" width="165" height="122" rx="16" fill="#eef5f9" stroke="#a9c0cf" stroke-width="2"/>
+  <text x="1012" y="393" text-anchor="middle" class="sans blue" font-size="20" font-weight="700">Ensemble</text>
+  <text x="1012" y="421" text-anchor="middle" class="sans blue" font-size="20" font-weight="700">attacks</text>
+  <text x="1012" y="450" text-anchor="middle" class="sans muted" font-size="16">transferability test</text>
+
+  <path d="M562 476v52M792 476v52M1012 476v52" fill="none" stroke="#7b1725" stroke-width="3" marker-end="url(#arrow)"/>
+  <rect x="560" y="550" width="520" height="72" rx="15" fill="#f5f8f7" stroke="#b9d0c7" stroke-width="2"/>
+  <path d="M600 586l18 18 34-38" fill="none" stroke="#2c7650" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="680" y="583" class="serif" fill="#2c7650" font-size="23" font-weight="700">Protected voice output</text>
+  <text x="680" y="608" class="sans muted" font-size="16">private · perceptually natural · harder to clone</text>
+
+  <text x="85" y="748" class="serif red" font-size="27" font-style="italic">Defend the speaker before the clone.</text>
+  <text x="85" y="783" class="sans muted" font-size="18">Identity protection · anti-cloning strength · perceptual quality</text>
+  <text x="1140" y="842" text-anchor="end" class="sans muted" font-size="15">Mingyu Ma · AI Security</text>
+</svg>
